@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#e9e9df" />
+  <meta name="description" content="One minute on your screen. One small adventure outside. Powered by open-weight AI on your device." />
+  <title>One Minute Outside — a pocket field guide</title>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><div class="wordmark"><span class="asterisk" aria-hidden="true">✳</span> one minute outside</div><span class="topnote">FIELD GUIDE / 001</span></header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">A SMALL EXPERIMENT IN PAYING ATTENTION</p>
+        <h1 id="hero-title">The world is<br /><em>still here.</em></h1>
+        <p class="intro">You don't need a destination. Tell this tiny local AI what your day feels like; it'll find one thing worth noticing beyond your screen.</p>
+        <div class="mini-badge">OPEN-WEIGHT AI · NO LOGIN · NO LOCATION TRACKING</div>
+      </section>
+      <section class="workspace" aria-label="Find your outside mission">
+        <div class="form-panel">
+          <p class="section-number">01 / BEFORE YOU GO</p>
+          <form id="quest-form">
+            <label for="mood">What's on your mind?</label>
+            <textarea id="mood" maxlength="500" rows="3" placeholder="I'm tired of staring at my screen. I need something quiet and small." required></textarea>
+            <div class="field-grid">
+              <div><label for="place">Your surroundings</label><select id="place"><option value="any">Anywhere</option><option value="city">City streets</option><option value="park">Park or garden</option><option value="water">Near water</option><option value="home">Just outside home</option></select></div>
+              <div><label for="minutes">Time available</label><select id="minutes"><option value="5">5 minutes</option><option value="10" selected>10 minutes</option><option value="20">20 minutes</option></select></div>
+              <div><label for="weather">The weather</label><select id="weather"><option value="any">Whatever it is</option><option value="clear">Dry</option><option value="rain">Rainy</option></select></div>
+              <div><label for="access">Moving around</label><select id="access"><option value="any">Any pace</option><option value="seated">Seated / minimal movement</option></select></div>
+            </div>
+            <button id="go" type="submit">Find my little adventure <span aria-hidden="true">↗</span></button>
+          </form>
+          <p id="model-status" class="model-status" role="status" aria-live="polite">AI starts only when you ask. First use downloads a free, open-weight model.</p>
+        </div>
+        <div class="result-panel" aria-live="polite">
+          <p class="section-number">02 / THE FIELD CARD</p>
+          <div id="empty-state" class="empty-state"><div class="sunmark" aria-hidden="true">◌</div><p>There is no perfect day to begin.<br />A small one will do.</p><span>YOUR CARD APPEARS HERE</span></div>
+          <article id="result" hidden>
+            <div class="card-meta"><span id="quest-time"></span><span id="quest-number"></span></div>
+            <h2 id="quest-title"></h2>
+            <p id="quest-desc"></p>
+            <ol id="quest-steps"></ol>
+            <div class="observation"><small>BRING BACK ONE THING</small><p id="quest-question"></p></div>
+            <button id="journal-open" class="outline-button" type="button">I went outside — record a moment ↗</button>
+          </article>
+        </div>
+      </section>
+      <section class="journal" aria-labelledby="journal-title">
+        <div class="journal-head"><div><p class="section-number">03 / WHAT YOU FOUND</p><h2 id="journal-title">A pocket full of moments.</h2></div><span id="entry-count">0 FIELD NOTES</span></div>
+        <form id="journal-form" hidden><label for="observation">One thing you noticed</label><textarea id="observation" maxlength="600" rows="2" placeholder="A leaf looked almost transparent in the sun." required></textarea><div class="journal-actions"><button type="submit">Keep this memory</button><button type="button" id="cancel-note" class="outline-button">Not now</button></div></form>
+        <div id="journal-list" class="journal-list"><p class="journal-empty">The collection starts with your first walk.</p></div>
+      </section>
+    </main>
+    <footer><span>GO OUT. COME BACK DIFFERENT.</span><span>YOUR WORDS STAY IN THIS BROWSER · OPEN-SOURCE AI RUNS LOCALLY</span></footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

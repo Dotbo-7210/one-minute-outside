@@ -1,0 +1,20 @@
+{
+  "name": "one-minute-outside",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Privacy-first open-weight AI field quest generator for getting outside",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
+    "smoke": "node scripts/model-smoke.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
